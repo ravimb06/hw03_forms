@@ -42,10 +42,10 @@ def profile(request, username):
     context = {
         'page_obj': page_obj,
         'username': user,
-# у меня тесты лишь 'username' пропускают, не смог исправить 
         'posts_count': posts_count,
     }
     return render(request, template, context)
+# у меня тесты лишь 'username' пропускают, не смог исправить
 
 
 def post_detail(request, post_id):
