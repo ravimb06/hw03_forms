@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}
-  Профайл пользователя {{ username.get_full_name }}
+  {{ user.get_full_name }} профайл пользователя
 {% endblock %}
 {% block content %}
+  <h1>Все посты пользователя {{ user.get_full_name }} </h1>
+  <h3>Всего постов: {{ posts_count }} </h3>
   {% for post in page_obj %}
-    <h1>Все посты пользователя {{ username.get_full_name }} </h1>
-    <h3>Всего постов: {{ posts_count }} </h3>   
     <article>
     <ul>
       <li>
