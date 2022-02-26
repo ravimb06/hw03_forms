@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 
@@ -43,7 +42,7 @@ def profile(request, username):
     context = {
         'page_obj': page_obj,
         'username': user,
-         # у меня тесты лишь 'username' пропускают, не смог исправить #
+# у меня тесты лишь 'username' пропускают, не смог исправить 
         'posts_count': posts_count,
     }
     return render(request, template, context)
